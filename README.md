@@ -7,7 +7,9 @@ We want to see your skills with React and TypeScript. You'll be given a Figma de
 ### What You'll Do
 1. **Fork the Repo**: You'll get a barebones Vite + React + TypeScript + Tailwind project. Fork it and get started.
 2. **Design Implementation**: Copy the Figma design into your project. Make it look as close as possible.
-3. **Data Integration**: [Create and use an AirOps App](https://docs.airops.com/getting-started/readme/workflow-quick-start) to fetch data and display it! 📊
+3. **Data Integration**: [Create an AirOps App](https://docs.airops.com/getting-started/readme/workflow-quick-start) that returns the necessary mock data for the design and [execute it](https://github.com/airopshq/airops-js) to display the mock data! 📊
+
+![Example of Airops App for the Data Integration](https://github.com/airopshq/fe-technical-assessment/blob/82059230a77065e0a4a7d683af1b4f00cd842c93/public/airpos-app-run-once-example.png)
 
 > Note: if you need to do any create, edit or delete, it doesn’t need to persist anywhere outside of the React state.
 
