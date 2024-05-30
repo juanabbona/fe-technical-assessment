@@ -1,0 +1,11 @@
+.page-header {
+  @apply flex border-b border-solid border-gray-100 px-4 py-6 justify-between items-center;
+}
+
+.page-title {
+  @apply text-3xl font-bold;
+}
+
+.page-content {
+  @apply px-4 py-1;
+}

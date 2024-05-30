@@ -1,0 +1,7 @@
+.app-layout {
+  @apply flex min-h-screen;
+}
+
+.app-layout .content {
+  @apply flex-1;
+}

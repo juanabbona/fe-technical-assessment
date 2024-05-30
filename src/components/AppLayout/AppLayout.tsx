@@ -1,11 +1,13 @@
+import "./AppLayout.styles.css";
+
 import { AppLayoutProps } from "./AppLayout.types";
 import SideBar from "./components/SideBar";
 
 const AppLayout = ({ children }: AppLayoutProps) => {
   return (
-    <div className="flex min-h-screen">
+    <div className="app-layout">
       <SideBar />
-      <div className="flex-1">{children}</div>
+      <div className="content">{children}</div>
     </div>
   );
 };

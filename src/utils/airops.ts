@@ -7,7 +7,11 @@ export const parseOutput = (output: string | object) => {
 
     if (strOutput.endsWith("```")) strOutput = strOutput.replace("```", "");
 
-    return JSON.parse(strOutput);
+    try {
+      return JSON.parse(strOutput);
+    } catch (e) {
+      return null;
+    }
   }
 
   return output;

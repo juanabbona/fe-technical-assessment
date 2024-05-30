@@ -1,0 +1,23 @@
+.sort-dropdown {
+  @apply flex flex-col gap-1 bg-white rounded-lg shadow border border-gray-100 p-2;
+}
+
+.sort-dropdown .option {
+  @apply flex w-40 px-2 py-1 rounded justify-between;
+}
+
+.sort-dropdown .option.selected {
+  @apply bg-purple-400 text-white;
+}
+
+.sort-dropdown-button {
+  @apply btn gap-2;
+}
+
+.sort-dropdown-button .icon {
+  @apply transition-all duration-300;
+}
+
+.sort-dropdown-button .icon.open {
+  @apply -rotate-180;
+}

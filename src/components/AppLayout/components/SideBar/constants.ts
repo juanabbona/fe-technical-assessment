@@ -4,7 +4,7 @@ import SettingsIcon from "src/icons/SettingsIcon";
 
 export const SIDEBAR_MENU_OPTIONS = [
   {
-    label: "Data Name",
+    label: "Data",
     path: "/data",
     IconComponent: DataIcon,
   },

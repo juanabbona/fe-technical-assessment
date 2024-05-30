@@ -5,7 +5,10 @@ import { WorkflowsData } from "./useWorkflows.types";
 import { WORKFLOWS_QUERY_KEY } from "src/constants/queryKeys";
 import { parseOutput } from "src/utils/airops";
 
-const WORKFLOWS_COUNT = 10;
+const APP_UUID = "bf402df4-13f3-4f87-8613-d6e4333e3b02";
+const APP_VERSION = 4;
+
+const WORKFLOWS_COUNT = 3;
 
 const useWorkflows = () => {
   const [initialized, setInitialized] = useState(false);
@@ -20,8 +23,8 @@ const useWorkflows = () => {
 
   const fetchWorkflows = async () => {
     const execution = await airopsInstance.current?.apps.execute({
-      appId: "bf402df4-13f3-4f87-8613-d6e4333e3b02",
-      version: 3,
+      appId: APP_UUID,
+      version: APP_VERSION,
       payload: {
         inputs: {
           count: WORKFLOWS_COUNT,
