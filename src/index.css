@@ -7,7 +7,19 @@
     @apply flex items-center justify-center border-solid border border-gray-200 rounded-md px-3;
   }
 
+  .btn-icon {
+    @apply flex items-center justify-center bg-gray-100 p-2 border-0 rounded-md;
+  }
+
   .field {
     @apply flex items-center justify-center border-solid border border-gray-300 rounded-md shadow min-h-9 px-3;
+  }
+
+  th {
+    @apply text-left
+  }
+
+  th, td {
+    @apply px-4 py-4 border-b border-gray-200
   }
 }

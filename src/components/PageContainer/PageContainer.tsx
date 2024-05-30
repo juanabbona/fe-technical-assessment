@@ -7,7 +7,7 @@ const PageContainer = ({ title, actions, children }: PageContainerProps) => {
         <h1 className="font-bold text-3xl">{title}</h1>
         {actions}
       </div>
-      <div className="px-4 py-6">{children}</div>
+      <div className="px-4 py-1">{children}</div>
     </div>
   );
 };
