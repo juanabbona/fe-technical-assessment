@@ -13,6 +13,7 @@ const TagBadge = ({ tags }: TagBadgeProps) => {
     <div className="inline-flex items-center text-sm font-semibold gap-1 border border-gray-200 px-3 py-2 rounded-full">
       {tags.map((tag) => (
         <div
+          key={tag.name}
           className="w-2 h-2 rounded-sm"
           style={{ backgroundColor: tag.color }}
         />
