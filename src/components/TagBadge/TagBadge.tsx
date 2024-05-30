@@ -4,9 +4,11 @@ import AddIcon from "src/icons/AddIcon";
 import { TagBadgeProps } from "./TagBadge.types";
 
 const TagBadge = ({ tags }: TagBadgeProps) => {
+  const handleAddTagClick = () => alert("Add tag clicked");
+
   if (!tags.length)
     return (
-      <button className="tag-badge-empty">
+      <button className="tag-badge-empty" onClick={handleAddTagClick}>
         <AddIcon className="fill-gray-400" /> Add Tag
       </button>
     );

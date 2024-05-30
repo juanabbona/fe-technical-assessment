@@ -7,6 +7,7 @@ import DeleteIcon from "src/icons/DeleteIcon";
 import useWorkflows from "src/hooks/useWorkflows/useWorkflows";
 import { ChangeEvent, useMemo, useState } from "react";
 import SortDropdown, { SortConfig } from "./components/SortDropdown";
+import { filterWorkflows, sortWorkflows } from "./utils";
 
 const Workflows = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -25,31 +26,19 @@ const Workflows = () => {
   const handleSortConfigChange = (newSortConfig: SortConfig) =>
     setSort(newSortConfig);
 
+  const handleEditWorkflowClick = () => alert("Edit workflow clicked");
+
+  const handleDeleteWorkflowClick = () => alert("Delete workflow clicked");
+
   const filteredWorkflows = useMemo(
-    () =>
-      workflows?.data?.filter((data) => {
-        return data.name.toLowerCase().includes(searchQuery.toLowerCase());
-      }),
+    () => filterWorkflows(workflows?.data || [], searchQuery),
     [workflows, searchQuery]
   );
 
-  const sortedWorkflows = useMemo(() => {
-    if (!filteredWorkflows) return null;
-
-    if (!sort) return filteredWorkflows;
-
-    return filteredWorkflows.sort((a, b) => {
-      if (sort.column === "lastUpdated") {
-        return sort.direction === "asc"
-          ? a.lastUpdated - b.lastUpdated
-          : b.lastUpdated - a.lastUpdated;
-      }
-
-      return sort.direction === "asc"
-        ? a[sort.column].localeCompare(b[sort.column])
-        : b[sort.column].localeCompare(a[sort.column]);
-    });
-  }, [filteredWorkflows, sort]);
+  const sortedWorkflows = useMemo(
+    () => sortWorkflows(filteredWorkflows, sort),
+    [filteredWorkflows, sort]
+  );
 
   return (
     <PageContainer
@@ -94,10 +83,16 @@ const Workflows = () => {
                 </td>
                 <td>
                   <div className="flex gap-2">
-                    <button className="btn-icon">
+                    <button
+                      className="btn-icon"
+                      onClick={handleEditWorkflowClick}
+                    >
                       <EditIcon />
                     </button>
-                    <button className="btn-icon">
+                    <button
+                      className="btn-icon"
+                      onClick={handleDeleteWorkflowClick}
+                    >
                       <DeleteIcon />
                     </button>
                   </div>
