@@ -1,9 +1,12 @@
+import AppLayout from "./components/AppLayout";
+import Workflows from "./pages/Workflows";
+
 function App() {
   return (
-    <div className="text-lg">
-      Technical assessment
-    </div>
-  )
+    <AppLayout>
+      <Workflows />
+    </AppLayout>
+  );
 }
 
-export default App
+export default App;
