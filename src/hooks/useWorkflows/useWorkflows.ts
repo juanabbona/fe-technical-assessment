@@ -8,7 +8,7 @@ import { parseOutput } from "src/utils/airops";
 const APP_UUID = "bf402df4-13f3-4f87-8613-d6e4333e3b02";
 const APP_VERSION = 4;
 
-const WORKFLOWS_COUNT = 3;
+const WORKFLOWS_COUNT = 10;
 
 const useWorkflows = () => {
   const [initialized, setInitialized] = useState(false);
