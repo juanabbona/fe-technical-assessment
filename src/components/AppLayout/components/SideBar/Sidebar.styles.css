@@ -1,0 +1,23 @@
+.sidebar {
+  @apply flex flex-col border-solid border-r-2 border-gray-100 w-60 gap-3 p-4;
+}
+
+.sidebar .logo-container {
+  @apply flex items-center gap-2;
+}
+
+.sidebar .logo {
+  @apply w-9 h-9 bg-purple-500 rounded;
+}
+
+.sidebar .title {
+  @apply text-base font-medium;
+}
+
+.sidebar .new-button {
+  @apply btn w-full gap-1 shadow min-h-8 font-medium;
+}
+
+.sidebar .menu-option {
+  @apply flex items-center gap-2 text-gray-500 text-sm min-h-8;
+}
